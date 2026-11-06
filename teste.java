@@ -13,9 +13,7 @@ public class teste {
         janela.setSize(1200, 699);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.setLocationRelativeTo(null);
-        Image imagemRedimensionada = imagem.getImage().getScaledInstance(
-                700, 400, Image.SCALE_SMOOTH
-        );
+        Image imagemRedimensionada = imagem.getImage().getScaledInstance(700, 400, Image.SCALE_SMOOTH);
 
         janela.add(fundo);
         janela.setVisible(true);
