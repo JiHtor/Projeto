@@ -6,7 +6,7 @@ public class teste {
 
         JFrame janela = new JFrame("Minha primeira interface");
 
-        janela.setSize(400, 300);
+        janela.setSize(700, 400);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.setLocationRelativeTo(null);
 
