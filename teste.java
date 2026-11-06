@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class teste {
 
-    public static void main(String[] args) {
+    public static void abrir() {
 
         JFrame janela = new JFrame("Minha primeira interface");
 
