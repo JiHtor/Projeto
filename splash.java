@@ -33,8 +33,7 @@ public class splash {
                 break; //interrompe o laço de repetição caso ocorra uma interrupção.
             }
         }
-        tela.dispose();// Fecha a Splash Screen
-
-        teste.abrir();// Abre a proxima tela
+        tela.dispose();//fecha a Splash Screen
+        teste.abrir();//abre a proxima tela
     }
 }
