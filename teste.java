@@ -1,21 +1,83 @@
+
 import javax.swing.*;
-import java.awt.Image;
+import java.awt.*;
 
 public class teste {
 
     public static void abrir() {
 
         JFrame janela = new JFrame("teste");
+        JTextArea terminal = new JTextArea();
+        JButton botao = new JButton("CONTINUAR");
 
-        ImageIcon imagem = new ImageIcon("img/tste.jpg");
-        JLabel fundo = new JLabel(imagem);
+        final int velocidadeNormal = 45;
+        final int velocidadeRapida = 5;
 
-        janela.setSize(1200, 699);
+        janela.setSize(1300, 799);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.setLocationRelativeTo(null);
-        Image imagemRedimensionada = imagem.getImage().getScaledInstance(700, 400, Image.SCALE_SMOOTH);
+        janela.setLayout(null);
+        janela.setUndecorated(true);
+        terminal.setBackground(Color.BLACK);
+        terminal.setForeground(Color.WHITE);
+        terminal.setCaretColor(Color.WHITE);
+        terminal.setFont(new Font("Consolas", Font.PLAIN, 20));
+        terminal.setEditable(false);
+        terminal.setLineWrap(true);
+        terminal.setWrapStyleWord(true);
+        botao.setBounds(1050, 700, 180, 50);
+        botao.setBackground(Color.BLACK);
+        botao.setForeground(Color.WHITE);
+        botao.setFont(new Font("Consolas", Font.BOLD, 16));
+        botao.setFocusPainted(false);
 
-        janela.add(fundo);
+        String lore =
+                "" +
+                        "> INICIANDO ARQUIVO...\n\n" +
+                        "> ANO 2045\n\n" +
+                        "O mundo como conhecemos deixou de existir.\n" +
+                        "Após um evento misterioso, a humanidade\n" +
+                        "passou a viver entre ruínas e tecnologias\n" +
+                        "abandonadas.\n\n" +
+                        "> UM NOVO DESTINO AGUARDA...\n";
+
+        // Efeito da digitação
+        final int[] indice = {0};
+        Timer digitacao = new Timer(velocidadeNormal, e -> {
+            if (indice[0] < lore.length()) {
+                terminal.append(
+                        String.valueOf(lore.charAt(indice[0])));
+                indice[0]++;
+            } else {
+                ((Timer) e.getSource()).stop();
+                botao.setEnabled(true);
+            }
+        });
+        // Detecta quando a tecla espaço é apertada
+        terminal.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("SPACE"), "acelerar");
+        terminal.getActionMap().put("acelerar", new AbstractAction() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                digitacao.setDelay(velocidadeRapida);
+            }});
+        // Detecta quando para de apertar a tecla espaço
+        terminal.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
+                .put(KeyStroke.getKeyStroke("released SPACE"), "normal");
+        terminal.getActionMap().put("normal", new AbstractAction() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent e) {
+                digitacao.setDelay(velocidadeNormal);
+            }
+        });
+        // Painel com rolagem
+        JScrollPane painel = new JScrollPane(terminal);
+        painel.setBounds(0, 0, 1300, 799);
+        janela.add(painel);
+        botao.setEnabled(false);
+        janela.add(botao);
+        digitacao.start();
         janela.setVisible(true);
+
     }
 }
