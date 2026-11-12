@@ -39,7 +39,16 @@ public class teste {
                         "Após um evento misterioso, a humanidade\n" +
                         "passou a viver entre ruínas e tecnologias\n" +
                         "abandonadas.\n\n" +
-                        "> UM NOVO DESTINO AGUARDA...\n";
+                        "> UM NOVO DESTINO AGUARDA...\n"+
+                 "    / \\  //\\\n" +
+                "     |\\___/|      \\\n" +
+                "     /0  0  \\      |\n" +
+                "    /     /  \\     |\n" +
+                "   /  \\_/     \\    |\n" +
+                "  /  /   \\     \\   |\n" +
+                "  \\  \\___/     /   |\n" +
+                "   \\__________/____|\n" +
+                "      DRAGON";
 
         // Efeito da digitação
         final int[] indice = {0};
@@ -53,7 +62,7 @@ public class teste {
                 botao.setEnabled(true);
             }
         });
-        // Detecta quando a tecla espaço é apertada
+        // Detecta quando a tecla espaço é apertado
         terminal.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
                 .put(KeyStroke.getKeyStroke("SPACE"), "acelerar");
         terminal.getActionMap().put("acelerar", new AbstractAction() {
