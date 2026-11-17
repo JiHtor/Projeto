@@ -7,7 +7,7 @@ public class escolha {
 
     public static void main(String[] args) {
 
-        JFrame janela = new JFrame("Escolha sua classe");
+        JFrame janela = new JFrame();
 
         janela.setSize(1300, 799);
         janela.getContentPane().setBackground(Color.BLACK);
@@ -150,6 +150,19 @@ public class escolha {
         textoDescricao.setForeground(Color.LIGHT_GRAY);
         textoDescricao.setFont(new Font("Consolas", Font.PLAIN, 15));
         textoDescricao.setHorizontalAlignment(SwingConstants.CENTER);
+
+        botao.addActionListener(e -> {
+            mago1.abrir();
+            janela.dispose();
+        });
+        botao.addActionListener(e -> {
+            ladino1.abrir();
+            janela.dispose();
+        });
+        botao.addActionListener(e -> {
+            paladino1.abrir();
+            janela.dispose();
+        });
         // Adicionando componentes
         painel.add(botao);
         painel.add(tituloClasse);

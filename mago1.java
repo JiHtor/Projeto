@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseAdapter;
 
-public class teste {
+public class mago1 {
     public static void abrir() {
 
         JFrame janela = new JFrame("teste");
@@ -32,22 +32,18 @@ public class teste {
         //texto da história
         String lore =
                 "\n" +
-                        "   > INICIANDO ARQUIVO...\n\n" +
-                        "   > ANO 2045\n\n" +
-                        "   O mundo como conhecemos deixou de existir.\n" +
-                        "   Após um evento misterioso, a humanidade\n" +
-                        "   passou a viver entre ruínas e tecnologias\n" +
-                        "   abandonadas.\n\n" +
-                        "   > UM NOVO DESTINO AGUARDA...\n\n\n\n\n\n" +
-                        "     / \\  //\\\n" +
-                        "     |\\___/|      \\\n" +
-                        "     /0  0  \\      |\n" +
-                        "    /     /  \\     |\n" +
-                        "   /  \\_/     \\    |\n" +
-                        "  /  /   \\     \\   |\n" +
-                        "  \\  \\___/     /   |\n" +
-                        "   \\__________/____|\n" +
-                        "      DRAGON";
+                        " Há anos, o sol não nasce sobre o reino. O que antes era uma terra próspera e iluminada hoje sufoca sob o véu \n" +
+                        " de uma maldição imposta por uma criatura ancestral — um Nosferatu de poder incomensurável. Do alto de seu \n" +
+                        " castelo isolado nas montanhas cinzentas, ele roubou a luz do dia e estendeu sua vontade sombria sobre a terra.\n" +
+                        "\n" +
+                        "Aos poucos, a escuridão corrompeu não apenas os céus, mas as mentes. O vampiro controla a vontade dos habitantes amaldiçoados, " +
+                        "transformando antigos cidadãos em marionetes silenciosas de seu domínio." +
+                        "Nos primeiros anos, o reino reuniu seus melhores soldados, mercenários e " +
+                        "aventureiros em expedições desesperadas rumo à fortaleza sombria. Nenhum deles retornou.\n" +
+                        "\n" +
+                        "Hoje, a esperança secou nas ruas vazias. Ninguém mais ousa olhar para o horizonte " +
+                        "onde o castelo se ergue. Resta apenas uma última " +
+                        "centelha contra a noite absoluta — e ela carrega o seu nome.";
 
         //configurações do botão
         botao.setBounds(1050, 700, 180, 50);

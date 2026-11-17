@@ -1,38 +1,65 @@
-import javax.swing.*; //importa a biblioteca Swing, utilizada para criar interfaces gráficas em Java
+import javax.swing.*;
 import java.awt.*;
-import java.awt.Color;
 
 public class splash {
     public static void main(String[] args) {
 
-        JFrame tela = new JFrame(); //cria a janela que exibirá a Splash Screen
-        JProgressBar progresso = new JProgressBar(); //cria uma barra de progresso para mostrar o carregamento
-        JLabel texto = new JLabel("Carregando sistema..."); //cria um texto que será exibido na janela
+        JFrame tela = new JFrame();
+        JProgressBar progresso = new JProgressBar();
+        JLabel texto = new JLabel("Carregando jogo...");
+        ImageIcon imagem = new ImageIcon("img/san.png");
 
-        tela.setSize(498, 371); //define o tamanho da janela
-        tela.getContentPane().setBackground(Color.BLACK);
-        tela.setLayout(null); //desativa o posicionamento automático dos componentes, permitindo posicioná-los manualmente
-        tela.setUndecorated(true); //remove a barra superior e as bordas padrão da janela
-        tela.setLocationRelativeTo(null); //centraliza a janela na tela do computador
+        // Pega o tamanho original da imagem
+        int largura = imagem.getIconWidth();
+        int altura = imagem.getIconHeight();
 
-        texto.setBounds(110, 290, 200, 30); //define a posição (X e Y), largura e altura do texto
-        progresso.setBounds(100, 320, 300, 20);
-        progresso.setStringPainted(true); //permite exibir o percentual numérico dentro da barra de progresso
+        // Cria o fundo
+        JLabel fundo = new JLabel(imagem);
+        fundo.setBounds(0, 0, largura, altura);
 
-        tela.add(texto); //adiciona o texto dentro da janela
-        tela.add(progresso); //adiciona a barra de progresso dentro da janela.
-        tela.setVisible(true); //torna a janela visível para o usuário.
+        // Configura a janela
+        tela.setSize(largura, altura);
+        tela.setLayout(null);
+        tela.setUndecorated(true);
+        tela.setLocationRelativeTo(null);
+        tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        for (int i = 0; i <= 100; i++) { //cria uma repetição que começa em 0 e termina em 100.
-            progresso.setValue(i); //atualiza o valor da barra de acordo com o número da variável i.
-            try { //inicia um bloco para tratar possíveis interrupções durante a espera.
-                Thread.sleep(30); //faz o programa esperar 30 milissegundos a cada repetição.
-            } catch (InterruptedException e) { //captura uma possível interrupção durante o tempo de espera.
-                Thread.currentThread().interrupt(); //restaura o estado de interrupção da thread atual.
-                break; //interrompe o laço de repetição caso ocorra uma interrupção.
+        // Centraliza o texto
+        texto.setBounds(
+                0,
+                altura - 90,
+                largura,
+                30
+        );
+
+        texto.setHorizontalAlignment(SwingConstants.CENTER);
+        texto.setForeground(Color.WHITE);
+        texto.setFont(new Font("Consolas", Font.BOLD, 20));
+
+        // Centraliza a barra de progresso
+        progresso.setBounds(
+                (largura - 300) / 2,
+                altura - 55,
+                300,
+                20
+        );
+        progresso.setStringPainted(true);
+
+        tela.add(texto);
+        tela.add(progresso);
+        tela.add(fundo);
+        tela.setVisible(true);
+
+        for (int i = 0; i <= 100; i++) {
+            progresso.setValue(i);
+            try {
+                Thread.sleep(30);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                break;
             }
         }
-        tela.dispose();//fecha a Splash Screen
-        //escolha.abrir();//abre a proxima tela
+        tela.dispose();
+        // escolha.abrir();
     }
 }
