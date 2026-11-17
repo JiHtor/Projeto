@@ -1,10 +1,10 @@
 import javax.swing.*;
 
-public class segunda {
+public class ladino2 {
 
     public static void abrir() {
 
-        JFrame janela = new JFrame("Segunda");
+        JFrame janela = new JFrame();
 
         janela.setSize(1300, 799);
         janela.setUndecorated(true); //remove a barra superior e as bordas padrão da janela

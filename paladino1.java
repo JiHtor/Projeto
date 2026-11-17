@@ -32,25 +32,39 @@ public class paladino1 {
         //texto da história
         String lore =
                 "\n" +
-                        " Há anos, o sol não nasce sobre o reino. O que antes era uma terra próspera e iluminada hoje sufoca sob o véu \n" +
-                        " de uma maldição imposta por uma criatura ancestral — um Nosferatu de poder incomensurável. Do alto de seu \n" +
-                        " castelo isolado nas montanhas cinzentas, ele roubou a luz do dia e estendeu sua vontade sombria sobre a terra.\n" +
-                        "\n" +
-                        " Aos poucos, a escuridão corrompeu não apenas os céus, mas as mentes. O vampiro controla a vontade dos habitantes amaldiçoados, " +
-                        " transformando antigos cidadãos em marionetes silenciosas de seu domínio." +
-                        " Nos primeiros anos, o reino reuniu seus melhores soldados, mercenários e " +
-                        " aventureiros em expedições desesperadas rumo à fortaleza sombria. Nenhum deles retornou.\n" +
-                        "\n" +
-                        " Hoje, a esperança secou nas ruas vazias. Ninguém mais ousa olhar para o horizonte " +
-                        " onde o castelo se ergue. Resta apenas uma última " +
-                        " centelha contra a noite absoluta — e ela carrega o seu nome."
-                ;
+                        " - Há anos, o sol não nasce sobre o reino. O que antes era uma terra próspera e iluminada hoje sufoca sob o véu de\n" +
+                        " uma maldição imposta por uma criatura ancestral — um Nosferatu de poder incomensurável. Do alto de seu castelo\n " +
+                        "isolado nas montanhas cinzentas, ele roubou a luz do dia e estendeu sua vontade sombria sobre a terra.\n" +
+                        "  Aos poucos, a escuridão corrompeu não apenas os céus, mas as mentes. O vampiro controla a vontade dos habitantes \n" +
+                        " amaldiçoados, transformando antigos cidadãos em marionetes silenciosas de seu domínio. Nos primeiros anos, o reino \n" +
+                        " reuniu seus melhores soldados, mercenários e aventureiros em expedições desesperadas rumo à fortaleza sombria. \n" +
+                        " Nenhum deles retornou.\n\n" +
+                        "            _.._                        +                        ^v^           \n" +
+                        "          .' .-'`                      / \\          ^v^                    \n" +
+                        "          |  |              +         /   \\         +                        \n" +
+                        "          \\  \\             / \\       /     \\       / \\                       \n" +
+                        "           '._'-._        /   \\     /   ^   \\     /   \\            ^v^       \n" +
+                        "        +     '```       /     \\   /   / \\   \\   /     \\            +        \n" +
+                        "       / \\              /   ^   \\ /   /   \\   \\ /   ^   \\          / \\       \n" +
+                        "      /   \\            /   / \\   /   |  _  |   \\   / \\   \\        /   \\      \n" +
+                        "     /  ^  \\          /____|_|__/____|_|_|_|____\\__|_|____\\      /  ^  \\     \n" +
+                        "    /__/_\\__\\         |  _   _  |  |  _   _   _  |  |  _   _  | /__/_\\__\\    \n" +
+                        "    | | | ||_||_||| |_| |_| ||_|_| |_| |_| |_| |_|_|| |_| |_| ||_||_|| | | |\n" +
+                        "     |  _  |  ||  | / \\ / \\ | || |   _______   | || | / \\ / \\ |  ||  |  _  | \n" +
+                        "     | | | |  ||  | | | | | | || |  /#######\\  | || | | | | | |  ||  | | | | \n" +
+                        "     | |_| |  ..  | |_| |_| | .. |  |#######|  | .. | |_| |_| |  ..  | |_| | \n" +
+                        "     |  .  |      |  .   .  |    |  |#######|  |    |  .   .  |      |  .  | \n" +
+                        "  __/_______\\____/___________\\__/___|#######|____\\__/___________\\____/_______\\__\n\n"+
+
+                        " Após ver seus companheiros serem corrompidos pelo Nosferatu, você fez um voto sagrado que protegeu sua mente \n" +
+                        " do controle do vampiro. Agora, como o último guerreiro sagrado, você parte sozinho rumo ao castelo, carregando \n" +
+                        " sua fé e sua lâmina para enfrentar a escuridão e impedir que a última luz do mundo desapareça.";
 
         //configurações do botão
         botao.setBounds(1050, 700, 180, 50);
         botao.setBackground(Color.BLACK);
         botao.setForeground(Color.WHITE);
-        botao.setFont(new Font("Consolas", Font.BOLD, 10));
+        botao.setFont(new Font("Consolas", Font.BOLD, 16));
         botao.setOpaque(true);
         botao.setFocusPainted(false);
         botao.setEnabled(false);
@@ -99,7 +113,7 @@ public class paladino1 {
 
         //ação do botão
         botao.addActionListener(e -> {
-            segunda.abrir();
+            paladino2.abrir();
             janela.dispose();
         });
 

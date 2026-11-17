@@ -56,10 +56,9 @@ public class mago1 {
                         "    | |_| |  ..  | |_| |_| | .. |  |#######|  | .. | |_| |_| |  ..  | |_| | \n" +
                         "    |  .  |      |  .   .  |    |  |#######|  |    |  .   .  |      |  .  | \n" +
                         " __/_______\\____/___________\\__/___|#######|____\\__/___________\\____/_______\\__\n\n" +
-                        " - Enquanto Nosferatu mergulhava o mundo na escuridão, você estudava magia astral nas bibliotecas subterrâneas da \n" +
-                        " antiga torre de marfim. Um selo arcano em sua alma o protegeu da influência do vampiro, tornando-o o último erudito \n" +
-                        " livre. Agora, armado apenas com seu cajado e grimórios, você parte rumo ao castelo para \n" +
-                        " desvendar a maldição e enfrentar a criatura que ameaça consumir o mundo.";
+                        " Criado nas sombras e acostumado a sobreviver sozinho, você é imune à maldição do Nosferatu por razões desconhecidas.\n" +
+                        " Após a queda dos heróis e exércitos do reino, você parte sozinho rumo ao castelo do vampiro, usando furtividade,\n " +
+                        " venenos e lâminas silenciosas para enfrentar o monstro que mergulhou o mundo na escuridão.";
 
         //configurações do botão
         botao.setBounds(1050, 700, 180, 50);
@@ -114,7 +113,7 @@ public class mago1 {
 
         //ação do botão
         botao.addActionListener(e -> {
-            segunda.abrir();
+            mago2.abrir();
             janela.dispose();
         });
 
