@@ -4,105 +4,156 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class escolha {
-    public static void main(String[] args){
 
-        JFrame janela = new JFrame();
-        JTextArea terminal = new JTextArea();
-        JButton mago = new JButton("MAGO: Um mestre das artes arcanas.");
-        JButton paladino = new JButton("PALADINO: Um combatente ágil e silencioso.");
-        JButton ladino = new JButton("LADINO: Um guerreiro sagrado que combina força e resistência.");
+    public static void main(String[] args) {
 
-        //texto da história
-        String lore =
-                "\n" +
-                        "   ESCOLHA SUA CLASSE: ";
+        JFrame janela = new JFrame("Escolha sua classe");
 
         janela.setSize(1300, 799);
         janela.getContentPane().setBackground(Color.BLACK);
-        janela.setForeground(Color.WHITE);
-        janela.setUndecorated(true); //remove a barra superior e as bordas padrão da janela
+        janela.setUndecorated(true);
         janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         janela.setLocationRelativeTo(null);
         janela.setLayout(null);
 
-        terminal.setText(lore);
-        terminal.setBackground(Color.BLACK);
-        terminal.setForeground(Color.WHITE);
-        terminal.setFont(new Font("Cinzel", Font.BOLD, 30));
-        terminal.setEditable(false);
-        terminal.setLineWrap(false);
-        terminal.setBounds(70, 70, 1100, 650);
+        // Título da tela
+        JLabel titulo = new JLabel("SELECIONE SUA CLASSE");
+        titulo.setBounds(350, 60, 600, 70);
+        titulo.setForeground(new Color(218, 190, 130));
+        titulo.setFont(new Font("Cinzel", Font.BOLD, 40));
+        titulo.setHorizontalAlignment(SwingConstants.CENTER);
 
-        mago.setBounds(170, 200, 1000, 130);
-        mago.setFont(new Font("Cinzel", Font.BOLD, 30));
-        mago.setOpaque(false);
-        mago.setContentAreaFilled(false);
-        mago.setBorderPainted(false);
-        mago.setFocusPainted(false);
-        mago.setForeground(Color.WHITE);
-        mago.setHorizontalAlignment(SwingConstants.LEFT);
-        mago.addMouseListener(new MouseAdapter() {
+        janela.add(titulo);
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                mago.setForeground(Color.GRAY);
-                mago.setFont(new Font("Cinzel", Font.BOLD, 35));
-            }
+        // Desenho do MAGO
+        String desenhoMago =
+                "            .    _\n" +
+                        "           /\\   | |\n" +
+                        "         _/_ \\_ >_<\n" +
+                        "        .-\\ -/.  |\n" +
+                        "       /  | | \\_ |\n" +
+                        "       \\ \\| |\\__(/\n" +
+                        "       /(`---')  |\n" +
+                        "      / /     \\  |\n" +
+                        "   _.'  \\'-'  /  |\n" +
+                        "   `----'`=-='   '";
 
-            @Override
-            public void mouseExited(MouseEvent e) {
-                mago.setForeground(Color.WHITE);
-                mago.setFont(new Font("Cinzel", Font.BOLD, 30));
-            }});
+        // Desenho do LADINO
+        String desenhoLadino =
+                "          .-.\n" +
+                        "         /   \\\n" +
+                        "        |\\-.-/|    /\\\n" +
+                        "        /\\___/\\    ||\n" +
+                        "       /  \\_/  \\  _||_\n" +
+                        "       \\ \\| |\\____(/\n" +
+                        "       /(`---')   '\n" +
+                        "      / /     \\\n" +
+                        "   _.'  \\'-'  /\n" +
+                        "   `----'`=-=' ";
 
-        paladino.setBounds(170, 350, 1000, 130);
-        paladino.setFont(new Font("Cinzel", Font.BOLD, 30));
-        paladino.setOpaque(false);
-        paladino.setContentAreaFilled(false);
-        paladino.setBorderPainted(false);
-        paladino.setFocusPainted(false);
-        paladino.setForeground(Color.WHITE);
-        paladino.setHorizontalAlignment(SwingConstants.LEFT);
-        paladino.addMouseListener(new MouseAdapter() {
+        // Desenho do PALADINO
+        String desenhoPaladino =
+                "          .-.\n" +
+                        "         /___\\     /\\\n" +
+                        "         |-=-|     ||\n" +
+                        "         \\___/     ||\n" +
+                        "        /=[_]=\\   _||_\n" +
+                        "        \\ \\| |\\___(/\n" +
+                        "        (`---')   ()\n" +
+                        "        | | | |\n" +
+                        "        |_| |_|\n" +
+                        "       (__) (__)\n";
 
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                paladino.setForeground(Color.GRAY);
-                paladino.setFont(new Font("Cinzel", Font.BOLD, 35));
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                paladino.setForeground(Color.WHITE);
-                paladino.setFont(new Font("Cinzel", Font.BOLD, 30));
-            }});
-
-        ladino.setBounds(170, 500, 1000, 130);
-        ladino.setFont(new Font("Cinzel", Font.BOLD, 30));
-        ladino.setOpaque(false);
-        ladino.setContentAreaFilled(false);
-        ladino.setBorderPainted(false);
-        ladino.setFocusPainted(false);
-        ladino.setForeground(Color.WHITE);
-        ladino.setHorizontalAlignment(SwingConstants.LEFT);
-        ladino.addMouseListener(new MouseAdapter() {
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                ladino.setForeground(Color.GRAY);
-                ladino.setFont(new Font("Cinzel", Font.BOLD, 35));
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                ladino.setForeground(Color.WHITE);
-                ladino.setFont(new Font("Cinzel", Font.BOLD, 30));
-            }});
-
-        janela.add(mago);
-        janela.add(paladino);
-        janela.add(ladino);
-        janela.add(terminal);
+        // Criando os três painéis
+        JPanel painelMago = criarPainel(
+                janela, "", desenhoMago,
+                "MAGO: Mestre das artes arcanas, capaz de causar grandes danos com magia.",
+                90, 220
+        );
+        JPanel painelLadino = criarPainel(
+                janela, "", desenhoLadino,
+                "LADINO: Ágil e silencioso, especialista em ataques furtivos e golpes críticos.",
+                460, 220
+        );
+        JPanel painelPaladino = criarPainel(
+                janela, "", desenhoPaladino,
+                "PALADINO: Guerreiro resistente, com grande defesa e capacidade de sobrevivência.",
+                830, 220
+        );
+        janela.add(painelMago);
+        janela.add(painelLadino);
+        janela.add(painelPaladino);
         janela.setVisible(true);
+    }
+
+    // Método responsável por criar cada classe
+    public static JPanel criarPainel(
+            JFrame janela,
+            String nome,
+            String desenho,
+            String descricao,
+            int x, int y) {
+
+        JPanel painel = new JPanel();
+        painel.setBounds(x, y, 340, 430);
+        painel.setBackground(Color.BLACK);
+        painel.setLayout(null);
+
+        // Botão da classe
+        JButton botao = new JButton();
+
+        botao.setBounds(10, 0, 320, 380);
+        botao.setLayout(null);
+
+        botao.setOpaque(false);
+        botao.setContentAreaFilled(false);
+        botao.setBorderPainted(false);
+        botao.setFocusPainted(false);
+
+        botao.setForeground(Color.WHITE);
+        botao.setFont(new Font("Cinzel", Font.BOLD, 28));
+
+        JLabel tituloClasse = new JLabel(nome);
+        tituloClasse.setBounds(10, 0, 320, 45);
+        tituloClasse.setForeground(new Color(218, 190, 130));
+        tituloClasse.setFont(new Font("Cinzel", Font.BOLD, 28));
+        tituloClasse.setHorizontalAlignment(SwingConstants.CENTER);
+
+        // Desenho do personagem
+        JLabel personagem = new JLabel(
+                "<html><pre>" + desenho + "</pre></html>");
+        personagem.setBounds(10, 50, 300, 220);
+        personagem.setForeground(Color.WHITE);
+        personagem.setFont(new Font("Consolas", Font.PLAIN, 17));
+        personagem.setHorizontalAlignment(SwingConstants.CENTER);
+        botao.add(personagem);
+
+        // Efeito ao passar o mouse
+        botao.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                botao.setForeground(new Color(218, 190, 130));
+                personagem.setForeground(new Color(218, 190, 130));
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                botao.setForeground(Color.WHITE);
+                personagem.setForeground(Color.WHITE);
+            }
+        });
+        // Descrição fora do botão
+        JLabel textoDescricao = new JLabel(
+                "<html><div style='text-align:center;'>"
+                        + descricao +
+                        "</div></html>");
+        textoDescricao.setBounds(10, 375, 320, 65);
+        textoDescricao.setForeground(Color.LIGHT_GRAY);
+        textoDescricao.setFont(new Font("Consolas", Font.PLAIN, 15));
+        textoDescricao.setHorizontalAlignment(SwingConstants.CENTER);
+        // Adicionando componentes
+        painel.add(botao);
+        painel.add(tituloClasse);
+        painel.add(textoDescricao);
+        return painel;
     }
 }
