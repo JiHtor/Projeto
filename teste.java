@@ -39,7 +39,7 @@ public class teste {
                         "   passou a viver entre ruínas e tecnologias\n" +
                         "   abandonadas.\n\n" +
                         "   > UM NOVO DESTINO AGUARDA...\n\n\n\n\n\n" +
-                        "    / \\  //\\\n" +
+                        "     / \\  //\\\n" +
                         "     |\\___/|      \\\n" +
                         "     /0  0  \\      |\n" +
                         "    /     /  \\     |\n" +
@@ -114,16 +114,12 @@ public class teste {
         //sistema de camadas
         JLayeredPane camadas = new JLayeredPane();
         camadas.setBounds(0, 0, 1300, 799);
-
         //terminal na camada de fundo
         camadas.add(painel, JLayeredPane.DEFAULT_LAYER);
-
         //botão na camada superior
         camadas.add(botao, JLayeredPane.PALETTE_LAYER);
-
         //adiciona as camadas à janela
         janela.add(camadas);
-
         //inicia a tela
         janela.setVisible(true);
         digitacao.start();
