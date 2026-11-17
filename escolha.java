@@ -5,7 +5,7 @@ import java.awt.event.MouseEvent;
 
 public class escolha {
 
-    public static void main(String[] args) {
+    public static void abrir() {
 
         JFrame janela = new JFrame();
 

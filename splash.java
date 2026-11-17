@@ -29,8 +29,7 @@ public class splash {
                 0,
                 altura - 90,
                 largura,
-                30
-        );
+                30);
 
         texto.setHorizontalAlignment(SwingConstants.CENTER);
         texto.setForeground(Color.WHITE);
@@ -41,9 +40,11 @@ public class splash {
                 (largura - 300) / 2,
                 altura - 55,
                 300,
-                20
-        );
+                20);
         progresso.setStringPainted(true);
+        progresso.setForeground(new Color(0, 0, 0));
+        progresso.setBackground(Color.DARK_GRAY);
+        progresso.setBorderPainted(false);
 
         tela.add(texto);
         tela.add(progresso);
@@ -60,6 +61,6 @@ public class splash {
             }
         }
         tela.dispose();
-        // escolha.abrir();
+        escolha.abrir();
     }
 }

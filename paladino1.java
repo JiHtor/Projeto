@@ -32,24 +32,25 @@ public class paladino1 {
         //texto da história
         String lore =
                 "\n" +
-                        " á anos, o sol não nasce sobre o reino. O que antes era uma terra próspera e iluminada hoje sufoca sob o véu \n" +
+                        " Há anos, o sol não nasce sobre o reino. O que antes era uma terra próspera e iluminada hoje sufoca sob o véu \n" +
                         " de uma maldição imposta por uma criatura ancestral — um Nosferatu de poder incomensurável. Do alto de seu \n" +
                         " castelo isolado nas montanhas cinzentas, ele roubou a luz do dia e estendeu sua vontade sombria sobre a terra.\n" +
                         "\n" +
-                        "Aos poucos, a escuridão corrompeu não apenas os céus, mas as mentes. O vampiro controla a vontade dos habitantes amaldiçoados, " +
-                        "transformando antigos cidadãos em marionetes silenciosas de seu domínio." +
-                        "Nos primeiros anos, o reino reuniu seus melhores soldados, mercenários e " +
-                        "aventureiros em expedições desesperadas rumo à fortaleza sombria. Nenhum deles retornou.\n" +
+                        " Aos poucos, a escuridão corrompeu não apenas os céus, mas as mentes. O vampiro controla a vontade dos habitantes amaldiçoados, " +
+                        " transformando antigos cidadãos em marionetes silenciosas de seu domínio." +
+                        " Nos primeiros anos, o reino reuniu seus melhores soldados, mercenários e " +
+                        " aventureiros em expedições desesperadas rumo à fortaleza sombria. Nenhum deles retornou.\n" +
                         "\n" +
-                        "Hoje, a esperança secou nas ruas vazias. Ninguém mais ousa olhar para o horizonte " +
-                        "onde o castelo se ergue. Resta apenas uma última " +
-                        "centelha contra a noite absoluta — e ela carrega o seu nome.";
+                        " Hoje, a esperança secou nas ruas vazias. Ninguém mais ousa olhar para o horizonte " +
+                        " onde o castelo se ergue. Resta apenas uma última " +
+                        " centelha contra a noite absoluta — e ela carrega o seu nome."
+                ;
 
         //configurações do botão
         botao.setBounds(1050, 700, 180, 50);
         botao.setBackground(Color.BLACK);
         botao.setForeground(Color.WHITE);
-        botao.setFont(new Font("Consolas", Font.BOLD, 16));
+        botao.setFont(new Font("Consolas", Font.BOLD, 10));
         botao.setOpaque(true);
         botao.setFocusPainted(false);
         botao.setEnabled(false);
