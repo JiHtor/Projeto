@@ -9,8 +9,8 @@ public class paladino1 {
         JFrame janela = new JFrame("teste");
         JTextArea terminal = new JTextArea();
         JButton botao = new JButton("CONTINUAR");
-        final int velocidadeNormal = 45;
-        final int velocidadeRapida = 5;
+        final int velocidadeNormal = 20;
+        final int velocidadeRapida = 1;
 
         //configurações da janela
         janela.setSize(1300, 799);
@@ -97,7 +97,6 @@ public class paladino1 {
             public void actionPerformed(java.awt.event.ActionEvent e) {
                 digitacao.setDelay(velocidadeNormal);
             }});
-
         //efeito de passar o mouse no botão
         botao.addMouseListener(new MouseAdapter() {
             @Override

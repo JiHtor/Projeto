@@ -9,8 +9,8 @@ public class ladino1 {
         JFrame janela = new JFrame("ladino");
         JTextArea terminal = new JTextArea();
         JButton botao = new JButton("CONTINUAR");
-        final int velocidadeNormal = 45;
-        final int velocidadeRapida = 5;
+        final int velocidadeNormal = 20;
+        final int velocidadeRapida = 1;
 
         //configurações da janela
         janela.setSize(1300, 799);

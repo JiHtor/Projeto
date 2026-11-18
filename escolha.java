@@ -100,6 +100,7 @@ public class escolha {
         janela.setVisible(true);
     }
 
+
     // Método responsável por criar cada classe
     public static JPanel criarPainel(
             JFrame janela,
@@ -121,8 +122,7 @@ public class escolha {
 
         // Desenho do personagem
         JLabel personagem = new JLabel(
-                "<html><pre>" + desenho + "</pre></html>"
-        );
+                "<html><pre>" + desenho + "</pre></html>");
 
         personagem.setBounds(10, 50, 320, 220);
         personagem.setForeground(Color.WHITE);
@@ -146,25 +146,21 @@ public class escolha {
             public void mouseEntered(MouseEvent e) {
                 personagem.setForeground(new Color(218, 190, 130));
             }
-
             @Override
             public void mouseExited(MouseEvent e) {
                 personagem.setForeground(Color.WHITE);
-            }
-        });
+            }});
 
         // Ação ao clicar
         botao.addActionListener(e -> {
             janela.dispose();
             acao.run();
         });
-
         // Descrição fora do botão
         JLabel textoDescricao = new JLabel(
                 "<html><div style='text-align:center;'>"
                         + descricao +
-                        "</div></html>"
-        );
+                        "</div></html>");
 
         textoDescricao.setBounds(10, 355, 320, 85);
         textoDescricao.setForeground(Color.LIGHT_GRAY);
@@ -179,7 +175,6 @@ public class escolha {
 
         // Garante que o botão fique atrás dos textos e do desenho
         painel.setComponentZOrder(botao, painel.getComponentCount() - 1);
-
         return painel;
     }
 }
